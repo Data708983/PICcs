@@ -1,0 +1,47 @@
+﻿<Window x:Class="PICcs.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PICcs"
+        xmlns:ikw="http://schemas.inkore.net/lib/ui/wpf"
+        xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
+       ui:WindowHelper.UseModernWindowStyle="True"
+        ui:WindowHelper.SystemBackdropType="Acrylic11"
+        ui:TitleBar.Height="36"
+        ui:TitleBar.Background="#caf6ff" 
+        ui:TitleBar.IsIconVisible="True"
+        mc:Ignorable="d"
+        ui:ThemeManager.RequestedTheme="Light" 
+        Icon="F:\Data\程序\pyhton\PIC_Alpha0.5\resource\PIC.ico"
+        Title="PICcs" Height="450" Width="800">
+    <!--I added something here, you can add whatever you want-->
+    <Border>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="2,0">
+                <GradientStop Color="#ffd1f0" Offset="0"/>
+                <GradientStop Color="#d5fcff" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <ikw:SimpleStackPanel VerticalAlignment="Center" Spacing="6">
+                <Grid HorizontalAlignment="Center">
+                    <TextBlock Grid.Column="0" FontSize="20" FontWeight="Bold" Margin="-45,4,45,-6">Just</TextBlock>
+                    <TextBlock FontSize="25" FontWeight="Bold" Margin="1,0,0,0" RenderTransformOrigin="-0.073,0.836">Pick</TextBlock>
+                    <TextBlock FontSize="20" FontWeight="Bold" Margin="56,4,-53,-5">it up</TextBlock>
+                </Grid>
+                <TextBlock Text="-- WPF Edition --" FontSize="13" TextAlignment="Center"/>
+                <Button  HorizontalAlignment="Center" Margin="0,20,0,0" Style="{StaticResource {x:Static ui:ThemeKeys.AccentButtonStyleKey}}" Click="Button_Click_1">
+                    <ui:IconAndText Icon="{x:Static ui:SegoeFluentIcons.FileExplorer}" Content="Open files" />
+                </Button>
+                <Button  HorizontalAlignment="Center" Margin="0,00,0,0">
+                    <ui:IconAndText Icon="{x:Static ui:SegoeFluentIcons.UpdateRestore}" Content="Recent files"/>
+                </Button>
+                <Button  HorizontalAlignment="Center" Margin="0,0,0,0" Click="Button_Click">
+                    <ui:IconAndText Icon="{x:Static ui:SegoeFluentIcons.QuickNote}" Content="Notification"/>
+                </Button>
+            </ikw:SimpleStackPanel>
+            <TextBlock TextAlignment="Right" VerticalAlignment="Bottom" Text="Version: 0.01Alpha" Margin="-10,0,10,10"/>
+        </Grid>
+    </Border>
+</Window>
