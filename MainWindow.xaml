@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PICcs"
         xmlns:ikw="http://schemas.inkore.net/lib/ui/wpf"
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
-        ui:WindowHelper.UseModernWindowStyle="True"
+       ui:WindowHelper.UseModernWindowStyle="True"
         ui:WindowHelper.SystemBackdropType="Acrylic11"
         ui:TitleBar.Height="36"
         ui:TitleBar.Background="#caf6ff" 
