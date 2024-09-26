@@ -5,11 +5,86 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ikw="http://schemas.inkore.net/lib/ui/wpf"
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
-        xmlns:local="clr-namespace:PIC" mc:Ignorable="d"
+        xmlns:local="clr-namespace:PIC" xmlns:sys="clr-namespace:System;assembly=netstandard" mc:Ignorable="d" 
         Title="{x:Static local:Program.AppTitle}" Height="450" Width="800" WindowStartupLocation="CenterScreen"
-        ui:WindowHelper.UseModernWindowStyle="True" ui:WindowHelper.SystemBackdropType="Tabbed"
-        >
-    <Grid>
+        FontSize="14" ui:TitleBar.ExtendViewIntoTitleBar="True" ui:TitleBar.Height="{DynamicResource TitlebarHeight}"
+        ui:WindowHelper.UseModernWindowStyle="True" ui:WindowHelper.SystemBackdropType="Tabbed">
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
 
+            <sys:Double x:Key="TitlebarHeight">40</sys:Double>
+            
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="Border_TitlebarArea"
+                Height="{StaticResource TitlebarHeight}">
+            <Grid>
+                <TextBlock Text="{x:Static local:Program.AppTitle}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,-4"/>
+            </Grid>
+        </Border>
+
+        <Border x:Name="Border_ToolbarArea" Grid.Row="1"
+                Margin="4,-6,4,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ui:CommandBarToolBar x:Name="CommandBarToolBar_LeftToolbar" HorizontalAlignment="Left">
+
+                    <ui:AppBarButton x:Name="AppBarButton_Open" Label="Open">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.OpenFolderHorizontal}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+                    <ui:AppBarButton x:Name="AppBarButton_Info" Label="Info" LabelPosition="Collapsed">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Trackers}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+
+                    <ui:AppBarSeparator/>
+
+                    <ui:AppBarButton x:Name="AppBarButton_Screenshot" Label="Screenshot">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Camera}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+
+                </ui:CommandBarToolBar>
+                <ui:CommandBarToolBar x:Name="CommandBarToolBar_RightToolbar" 
+                                      HorizontalAlignment="Right" Grid.Column="1">
+                    
+                    <ui:AppBarButton x:Name="AppBarButton_Help" Label="Help" LabelPosition="Collapsed">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Help}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+                    <ui:AppBarButton x:Name="AppBarButton_About" Label="About" LabelPosition="Collapsed">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Info}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+                    
+                </ui:CommandBarToolBar>
+
+            </Grid>
+        </Border>
+
+        <Border x:Name="Border_MainArea" Grid.Row="2"
+                BorderBrush="{DynamicResource {x:Static ui:ThemeKeys.CardStrokeColorDefaultBrushKey}}"
+                Background="{DynamicResource {x:Static ui:ThemeKeys.LayerOnMicaBaseAltFillColorDefaultBrushKey}}"
+                BorderThickness="0,1,0,0" CornerRadius="8 8 0 0">
+            
+        </Border>
     </Grid>
 </Window>

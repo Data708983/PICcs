@@ -11,6 +11,16 @@
                 <ui:ThemeResources/>
                 <ui:XamlControlsResources/>
             </ResourceDictionary.MergedDictionaries>
+
+
+            <Style TargetType="ui:AppBarButton">
+                <Style.Triggers>
+                    <Trigger Property="LabelPosition" Value="Collapsed">
+                        <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
