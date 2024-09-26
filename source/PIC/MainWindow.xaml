@@ -6,14 +6,14 @@
         xmlns:ikw="http://schemas.inkore.net/lib/ui/wpf"
         xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
         xmlns:local="clr-namespace:PIC" xmlns:sys="clr-namespace:System;assembly=netstandard" mc:Ignorable="d" 
-        Title="{x:Static local:Program.AppTitle}" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        Title="{x:Static local:Program.AppTitle}" Height="500" Width="840" WindowStartupLocation="CenterScreen"
         FontSize="14" ui:TitleBar.ExtendViewIntoTitleBar="True" ui:TitleBar.Height="{DynamicResource TitlebarHeight}"
         ui:WindowHelper.UseModernWindowStyle="True" ui:WindowHelper.SystemBackdropType="Tabbed">
     <FrameworkElement.Resources>
         <ResourceDictionary>
 
             <sys:Double x:Key="TitlebarHeight">40</sys:Double>
-            
+
         </ResourceDictionary>
     </FrameworkElement.Resources>
 
@@ -61,7 +61,7 @@
                         </ui:AppBarButton.Icon>
                         <ui:AppBarButton.Flyout>
                             <ui:Flyout>
-                                
+
                             </ui:Flyout>
                         </ui:AppBarButton.Flyout>
                     </ui:AppBarButton>
@@ -89,7 +89,7 @@
                 </ui:CommandBarToolBar>
                 <ui:CommandBarToolBar x:Name="CommandBarToolBar_RightToolbar" 
                                       HorizontalAlignment="Right" Grid.Column="1">
-                    
+
                     <ui:AppBarButton x:Name="AppBarButton_Help" Label="Help" LabelPosition="Collapsed">
                         <ui:AppBarButton.Icon>
                             <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Help}"/>
@@ -100,7 +100,7 @@
                             <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Info}"/>
                         </ui:AppBarButton.Icon>
                     </ui:AppBarButton>
-                    
+
                 </ui:CommandBarToolBar>
 
             </Grid>
@@ -110,7 +110,20 @@
                 BorderBrush="{DynamicResource {x:Static ui:ThemeKeys.CardStrokeColorDefaultBrushKey}}"
                 Background="{DynamicResource {x:Static ui:ThemeKeys.LayerOnMicaBaseAltFillColorDefaultBrushKey}}"
                 BorderThickness="0,1,0,0" CornerRadius="8 8 0 0">
-            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="240"/>
+                </Grid.ColumnDefinitions>
+
+                <Border x:Name="Border_MainLeftArea"
+                        BorderBrush="{DynamicResource {x:Static ui:ThemeKeys.CardStrokeColorDefaultBrushKey}}"
+                        BorderThickness="0,0,1,0">
+                    <Grid>
+                        
+                    </Grid>
+                </Border>
+            </Grid>
         </Border>
     </Grid>
 </Window>
