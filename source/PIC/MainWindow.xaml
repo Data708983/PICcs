@@ -48,9 +48,35 @@
                     </ui:AppBarButton>
                     <ui:AppBarButton x:Name="AppBarButton_Info" Label="Info" LabelPosition="Collapsed">
                         <ui:AppBarButton.Icon>
-                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Trackers}"/>
+                            <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.PreviewLink_20_Regular}" FontSize="20" Margin="0,-3,0,0"/>
                         </ui:AppBarButton.Icon>
                     </ui:AppBarButton>
+
+                    <ui:AppBarSeparator/>
+
+                    <ui:AppBarButton x:Name="AppBarButton_Adjust" Label="Adjustments"
+                                     ChevronStyle="Down">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Equalizer}"/>
+                        </ui:AppBarButton.Icon>
+                        <ui:AppBarButton.Flyout>
+                            <ui:Flyout>
+                                
+                            </ui:Flyout>
+                        </ui:AppBarButton.Flyout>
+                    </ui:AppBarButton>
+                    <ui:AppBarButton x:Name="AppBarButton_FlipX" Label="Flip Horizontally" LabelPosition="Collapsed">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.FlipHorizontal_16_Regular}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+                    <ui:AppBarButton x:Name="AppBarButton_FlipY" Label="Flip Vertically" LabelPosition="Collapsed">
+                        <ui:AppBarButton.Icon>
+                            <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.FlipVertical_16_Regular}"/>
+                        </ui:AppBarButton.Icon>
+                    </ui:AppBarButton>
+
+
 
                     <ui:AppBarSeparator/>
 
