@@ -60,7 +60,7 @@
                             <ui:FontIcon Icon="{x:Static ui:SegoeFluentIcons.Equalizer}"/>
                         </ui:AppBarButton.Icon>
                         <ui:AppBarButton.Flyout>
-                            <ui:Flyout>
+                            <ui:Flyout Placement="Bottom">
 
                             </ui:Flyout>
                         </ui:AppBarButton.Flyout>
