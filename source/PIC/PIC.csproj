@@ -9,11 +9,26 @@
         <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <StartupObject>PIC.Program</StartupObject>
+        <ApplicationIcon>Resources\Icons\PIC-Main.ico</ApplicationIcon>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Icons\PIC-Main.ico" />
+      <None Remove="Resources\Icons\PIC-Main_512w.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Resources\Icons\PIC-Main.ico" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="iNKORE.UI.WPF" Version="1.2.7.1" />
         <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.9.30" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Resources\Icons\PIC-Main.ico" />
+      <Resource Include="Resources\Icons\PIC-Main_512w.png" />
     </ItemGroup>
 
 </Project>
